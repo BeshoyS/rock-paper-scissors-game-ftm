@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom, hsl(214, 47%, 23%), hsl(237, 49%, 15%))
+    no-repeat;
+  min-height: 100vh;
+  position: relative;
+}
+
+img {
+  display: block;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.main {
+  width: min(95%, 600px);
+  margin-inline: auto;
+  padding-block: 2rem;
+}
+
+/*****Header******/
+.header {
+  border: 2px solid hsl(217, 16%, 45%);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  color: hsl(229, 25%, 31%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-wrapper {
+  flex: 1;
+}
+
+.logo {
+  width: 40%;
+}
+
+.score-sec {
+  background-color: hsl(0, 100%, 100%);
+  width: max(25%, 100px);
+  padding: 0.5rem;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+
+.score-title {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: hsl(229, 64%, 46%);
+}
+
+.score-num {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+/****Hands Sec*****/
+.hands {
+  width: min(100%, 400px);
+  margin-inline: auto;
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5em;
+  justify-content: center;
+  align-items: center;
+  background: url(./images/bg-triangle.svg) no-repeat center center;
+  background-size: 70%;
+}
+
+.hand {
+  padding: 0.8em;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hand-scissors {
+  background-image: linear-gradient(
+    to bottom,
+    hsl(39, 89%, 49%),
+    hsl(40, 84%, 53%)
+  );
+}
+.hand-paper {
+  background-image: linear-gradient(
+    to bottom,
+    hsl(230, 89%, 62%),
+    hsl(230, 89%, 65%)
+  );
+}
+.hand-rock {
+  background-image: linear-gradient(
+    to bottom,
+    hsl(349, 71%, 52%),
+    hsl(349, 70%, 56%)
+  );
+}
+
+.hand > img {
+  background-color: hsl(0, 100%, 100%);
+  padding: 1.2rem;
+  width: 90px;
+  height: 90px;
+  border-radius: inherit;
+}
+
+/****Contest Sec******/
+.contest {
+  display: none;
+  width: min(100%, 400px);
+  margin-inline: auto;
+  margin-top: 5rem;
+}
+
+.contest-hands {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.results {
+  color: hsl(0, 100%, 100%);
+  margin: 3rem auto;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.result {
+  font-size: 2rem;
+}
+
+.again-btn {
+  color: hsl(229, 25%, 31%);
+  background-color: hsl(0, 100%, 100%);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 1em;
+  font-size: 0.8rem;
+  padding: 0.9em 2.8em;
+  border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  -ms-border-radius: 0.5em;
+  -o-border-radius: 0.5em;
+}
+
+/**** Rules *****/
+.rules-btn {
+  position: absolute;
+  inset: auto 50% 2rem auto;
+  transform: translateX(50%);
+  background-color: transparent;
+  color: hsl(0, 100%, 100%);
+  border: 1px solid hsl(0, 100%, 100%);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  padding: 0.6em 2em;
+  border-radius: 0.5em;
+}
+
+.rules-modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: hsla(0, 0%, 0%, 30%);
+  position: absolute;
+  inset: 0;
+  z-index: 50;
+}
+.rules-content {
+  background-color: hsl(0, 100%, 100%);
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 5rem;
+  padding-block: 5rem;
+}
+
+.rules-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: hsl(229, 25%, 31%);
+}
+
+.close-btn {
+  background-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  /**** Rules *****/
+  .rules-btn {
+    inset: auto 2rem 2rem auto;
+    transform: translateX(0);
+  }
+  .rules-content {
+    place-items: initial;
+    grid-template-columns: repeat(2, 1fr);
+    height: auto;
+    width: auto;
+    gap: 2rem;
+    padding: 1.8em 2.4em;
+    border-radius: 0.5em;
+  }
+
+  .rules-img {
+    grid-column: span 2;
+  }
+
+  .close-btn {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+  }
+}

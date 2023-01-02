@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  </head>
+  <body>
+    <main class="main">
+      <header class="header">
+        <h1 class="sr-only">Rock, Paper, Scissors Game</h1>
+        <div class="logo-wrapper">
+          <img class="logo" src="./images/logo.svg" alt="" />
+        </div>
+        <div class="score-sec">
+          <p class="score-title">score</p>
+          <p class="score-num">0</p>
+        </div>
+      </header>
+      <section id="hands" class="hands">
+        <div class="hand hand-paper" data-hand="paper">
+          <img class="" src="./images/icon-paper.svg" alt="" />
+        </div>
+        <div class="hand hand-scissors" data-hand="scissors">
+          <img class="" src="./images/icon-scissors.svg" alt="" />
+        </div>
+        <div class="hand hand-rock" data-hand="rock">
+          <img class="" src="./images/icon-rock.svg" alt="" />
+        </div>
+      </section>
+      <section id="contest" class="contest">
+        <div class="contest-hands">
+          <div id="userHand" class="user-hand hand">
+            <img id="userHandImg" src="" alt="" />
+          </div>
+          <div  id="pcHand"class="pc-hand hand">
+            <img id="pcHandImg" src="./images/icon-paper.svg" alt="" />
+          </div>
+        </div>
+        <div class="results">
+          <h2 id="resultDecision" class="result">You Win</h2>
+          <button id="againBtn" class="again-btn">Play Again</button>
+        </div>
+      </section>
+    </main>
+    <button id="rulesBtn" class="rules-btn">Rules</button>
+    <div id="rulesModal" class="rules-modal">
+      <div class="rules-content">
+        <h2 class="rules-title">Rules</h2>
+        <img class="rules-img" src="./images/image-rules.svg" alt="" />
+        <button id="closeBtn" class="close-btn">
+          <img class="close-btn" src="./images/icon-close.svg" alt="" />
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
