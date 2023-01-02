@@ -1,5 +1,6 @@
 # Frontend Mentor - Rock, Paper, Scissors
 
+### Live Demo - https://beshoys.github.io/rock-paper-scissors-game-ftm/
 ![Design preview for the Rock, Paper, Scissors coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
